@@ -25,6 +25,22 @@ for (var i = 0; i < difficolta; i++) {
     }
 }
 
+var seconds = 30;
+
+var display = document.getElementById('timer');
+
+var timerDisplay = setInterval(function() {
+
+  display.innerHTML = seconds;
+
+  if (seconds == 0) {
+    clearInterval(timerDisplay)
+  } else {
+    seconds--;
+  }
+
+}, 1000);
+
 alert('Numeri da ricordare: ' + numeriCasuali);
 
 setTimeout(timer, 30000);
