@@ -5,7 +5,14 @@
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati
 // Assicuratevi di saper fare correttamente l’ esercizio con output base (alert() , prompt() , console.log() )
 
-var difficolta = parseInt( prompt('Con quanti numeri vuoi giocare?'));
+var difficolta = parseInt( prompt('Con quanti numeri vuoi giocare?').trim());
+
+for (var i = 0; i < 1; i++) {
+  if (isNaN(difficolta)) {
+    difficolta = parseInt( prompt('Devi inserire un numero').trim());
+    i--;
+  }
+}
 
 var numeriCasuali = [];
 
@@ -26,7 +33,7 @@ function timer() {
   var arrayNum = [];
   var score = 0;
   for (var i = 0; i < difficolta; i++) {
-    var numeriGioco = parseInt ( prompt('Simon dice di riscrivere i numeri che hai visto'));
+    var numeriGioco = parseInt ( prompt('Simon dice di riscrivere i numeri che hai visto').trim());
       if (numeriCasuali.includes(numeriGioco)) {
         arrayNum.push(numeriGioco);
         score++;
