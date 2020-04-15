@@ -30,6 +30,7 @@ function timer() {
       if (numeriCasuali.includes(numeriGioco)) {
         arrayNum.push(numeriGioco);
         score++;
+        alert('Corretto!');
       } else {
         alert('Sbagliato!');
       }
