@@ -20,7 +20,7 @@ for (var i = 0; i < difficolta; i++) {
 
 alert('Numeri da ricordare: ' + numeriCasuali);
 
-setTimeout(timer, 3000);
+setTimeout(timer, 30000);
 
 function timer() {
   var arrayNum = [];
